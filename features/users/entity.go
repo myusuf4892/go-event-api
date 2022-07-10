@@ -4,14 +4,21 @@ import (
 	"time"
 )
 
-type Core struct{
-	ID 			int
-	Name 		string
-	Email 		string
-	Password 	string
-	URL			string
-	CreatedAt 	time.Time
-	UpdatedAt 	time.Time
+type Core struct {
+	ID        int
+	Name      string
+	Email     string
+	Password  string
+	URL       string
+	RoleID    Role
+	CreatedAt time.Time
+	UpdatedAt time.Time
+	Role      Role
+}
+
+type Role struct {
+	ID   int
+	Name string
 }
 
 type Business interface {

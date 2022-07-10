@@ -7,6 +7,7 @@ type User struct {
 	Name     string `json:"name" form:"name"`
 	Email    string `json:"email" form:"email"`
 	Password string `json:"password" form:"password"`
+	Role     users.Role
 }
 
 func ToCore(userReq User) users.Core {
@@ -15,6 +16,10 @@ func ToCore(userReq User) users.Core {
 		Name:     userReq.Name,
 		Email:    userReq.Email,
 		Password: userReq.Password,
+		Role: users.Role{
+			ID:   userReq.Role.ID,
+			Name: userReq.Role.Name,
+		},
 	}
 	return userCore
 }

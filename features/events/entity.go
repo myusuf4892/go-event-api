@@ -15,6 +15,7 @@ type Core struct {
 	Date        time.Time
 	Performers  string
 	HostedBy    string
+	Fee         int
 	City        string
 	Location    string
 	IDUser      int

@@ -1,6 +1,6 @@
 <div align='center'>
 
-![Infinity-API](./header.png)
+![Infinity-API](./images/header.png)
 
 </div>
 

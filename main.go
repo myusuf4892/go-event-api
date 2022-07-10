@@ -1,12 +1,12 @@
 package main
 
 import (
-	"project3/eventapp/factory"
+	"project3/eventapp/app/factory"
+	"project3/eventapp/app/migration"
 	"project3/eventapp/middlewares"
-	"project3/eventapp/migration"
 	"project3/eventapp/routes"
 
-	"project3/eventapp/config"
+	"project3/eventapp/app/config"
 )
 
 func main() {

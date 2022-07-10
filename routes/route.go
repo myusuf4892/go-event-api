@@ -1,7 +1,7 @@
 package routes
 
 import (
-	"project3/eventapp/factory"
+	"project3/eventapp/app/factory"
 	"project3/eventapp/middlewares"
 
 	"github.com/labstack/echo/v4"
@@ -30,10 +30,10 @@ func New(presenter factory.Presenter) *echo.Echo {
 	e.PUT("/events/:id", presenter.EventPresenter.UpdateData, middlewares.JWTMiddleware())
 	e.DELETE("/events/:id", presenter.EventPresenter.DeleteData, middlewares.JWTMiddleware())
 	e.GET("/myevents", presenter.EventPresenter.GetEventByUser, middlewares.JWTMiddleware())
-	
+
 	e.POST("/events/participations", presenter.ParticipantPresenter.Joined, middlewares.JWTMiddleware())
 	e.GET("/events/participations", presenter.ParticipantPresenter.GetAllEventParticipant, middlewares.JWTMiddleware())
 	e.DELETE("/events/participations/:id", presenter.ParticipantPresenter.DeleteEventbyParticipant, middlewares.JWTMiddleware())
-	
+
 	return e
 }

@@ -16,6 +16,7 @@ type Event struct {
 	Date       time.Time `json:"date" form:"date"`
 	Performers string    `json:"performers" form:"performers"`
 	HostedBy   string    `json:"hostedby" form:"hostedby"`
+	Fee        int       `json:"fee" form:"fee"`
 	City       string    `json:"city" form:"city"`
 	Location   string    `json:"location" form:"location"`
 	UserID     int       `json:"user_id" form:"user_id"`
@@ -41,6 +42,7 @@ func (data *Event) toCore() events.Core {
 		Url:         data.URL,
 		City:        data.City,
 		HostedBy:    data.HostedBy,
+		Fee:         data.Fee,
 		Performers:  data.Performers,
 		Location:    data.Location,
 		Date:        data.Date,

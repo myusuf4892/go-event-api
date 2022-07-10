@@ -2,7 +2,7 @@ package middlewares
 
 import (
 	"fmt"
-	"project3/eventapp/config"
+	"project3/eventapp/app/config"
 	"time"
 
 	"github.com/golang-jwt/jwt"
